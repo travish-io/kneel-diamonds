@@ -34,6 +34,7 @@ const database = {
       timestamp: 1614659931693,
     },
   ],
+  orderBuilder: {},
 };
 
 export const getMetals = () => {
@@ -47,4 +48,15 @@ export const getStyles = () => {
 };
 export const getOrders = () => {
   return database.customOrders.map((order) => ({ ...order }));
+};
+export const setMetal = (id) => {
+  database.orderBuilder.metalId = id;
+};
+
+export const setSize = (id) => {
+  database.orderBuilder.sizeId = id;
+};
+
+export const setStyle = (id) => {
+  database.orderBuilder.styleId = id;
 };
